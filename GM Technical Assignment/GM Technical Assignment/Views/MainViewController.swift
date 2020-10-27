@@ -10,6 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    let viewModel = MainViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,9 @@ class MainViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
+        
+        // Set view model delegate
+        viewModel.delegate = self
     }
 
 
@@ -32,5 +36,15 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
+    }
+}
+
+extension MainViewController: MainViewModelDelegate {
+    func loadViewDataError(error: String) {
+        
+    }
+    
+    func viewDataLoaded() {
+        
     }
 }
