@@ -52,7 +52,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 extension MainViewController: MainViewModelDelegate {
     func loadViewDataError(error: String) {
         self.tableView.refreshControl?.endRefreshing()
-        print(error)
+        showAlert(title: "Error", message: error)
     }
     
     func viewDataLoaded() {
