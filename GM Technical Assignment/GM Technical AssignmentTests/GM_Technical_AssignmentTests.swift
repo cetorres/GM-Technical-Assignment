@@ -18,9 +18,21 @@ class GM_Technical_AssignmentTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testCommitService() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        CommitService.shared.getCommits { result in
+            switch result {
+            case .success(let commitInfoList):
+                XCTAssert(!commitInfoList.isEmpty)
+                for item in commitInfoList {
+                    XCTAssert(!item.commit.author.name.isEmpty)
+                    XCTAssert(!item.commit.message.isEmpty)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
     func testPerformanceExample() throws {

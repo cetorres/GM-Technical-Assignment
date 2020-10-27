@@ -12,7 +12,7 @@ class CommitService {
     private let httpRequest = HTTPRequestHelper<CommitInfo>()
     
     func getCommits(completion: @escaping ((Result<[CommitInfo], Error>) -> Void)) {
-        let commitsURL = "https://api.github.com/repos/cetorres/gm_technical_assignment/commits"
+        let commitsURL = "https://api.github.com/repos/cetorres/GM-Technical-Assignment/commits"
         httpRequest.sendRequest(commitsURL, parameters: [:], completion: completion)
     }
 }
