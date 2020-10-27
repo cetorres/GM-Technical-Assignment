@@ -22,11 +22,18 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.tableFooterView = UIView()
         
+        // Table view refresh control
+        let rc = UIRefreshControl()
+        rc.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        tableView.refreshControl = rc
+        
         // Set view model delegate
         viewModel.delegate = self
     }
 
-
+    @objc func refreshData() {
+        viewModel.reloadCommitInfo()
+    }
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
