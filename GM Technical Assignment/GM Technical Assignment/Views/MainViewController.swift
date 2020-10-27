@@ -38,20 +38,25 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel.commitInfoList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CommitInfoCell", for: indexPath) as! CommitInfoCell
+        cell.selectionStyle = .none
+        cell.setData(commitInfo: viewModel.commitInfoList[indexPath.row])
+        return cell
     }
 }
 
 extension MainViewController: MainViewModelDelegate {
     func loadViewDataError(error: String) {
-        
+        self.tableView.refreshControl?.endRefreshing()
+        print(error)
     }
     
     func viewDataLoaded() {
-        
+        self.tableView.reloadData()
+        self.tableView.refreshControl?.endRefreshing()
     }
 }
