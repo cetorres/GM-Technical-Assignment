@@ -11,6 +11,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     let viewModel = MainViewModel()
+    let activityIndicator = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,12 @@ class MainViewController: UIViewController {
         let rc = UIRefreshControl()
         rc.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         tableView.refreshControl = rc
+        
+        // Initial activity indicator
+        view.addSubview(activityIndicator)
+        activityIndicator.center = CGPoint(x: view.center.x, y: view.center.y)
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
         
         // Set view model delegate
         viewModel.delegate = self
@@ -51,6 +58,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension MainViewController: MainViewModelDelegate {
     func loadViewDataError(error: String) {
+        self.activityIndicator.stopAnimating()
         self.tableView.refreshControl?.endRefreshing()
         showAlert(title: "Error", message: error)
     }
@@ -59,5 +67,6 @@ extension MainViewController: MainViewModelDelegate {
         title = "Commits (\(viewModel.commitInfoList.count))"
         self.tableView.reloadData()
         self.tableView.refreshControl?.endRefreshing()
+        self.activityIndicator.stopAnimating()
     }
 }
