@@ -15,6 +15,7 @@
 		6B97EAE62547A8F9000A8C79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B97EAE42547A8F9000A8C79 /* LaunchScreen.storyboard */; };
 		6B97EAF12547A8F9000A8C79 /* GM_Technical_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B97EAF02547A8F9000A8C79 /* GM_Technical_AssignmentTests.swift */; };
 		6B97EAFC2547A8F9000A8C79 /* GM_Technical_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B97EAFB2547A8F9000A8C79 /* GM_Technical_AssignmentUITests.swift */; };
+		6B97EB192547AA69000A8C79 /* HTTPRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B97EB182547AA69000A8C79 /* HTTPRequestHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6B97EAF72547A8F9000A8C79 /* GM Technical AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GM Technical AssignmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B97EAFB2547A8F9000A8C79 /* GM_Technical_AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GM_Technical_AssignmentUITests.swift; sourceTree = "<group>"; };
 		6B97EAFD2547A8F9000A8C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B97EB182547AA69000A8C79 /* HTTPRequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		6B97EB162547A9E5000A8C79 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6B97EB182547AA69000A8C79 /* HTTPRequestHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				6B97EADE2547A8F7000A8C79 /* MainViewController.swift in Sources */,
 				6B97EADA2547A8F7000A8C79 /* AppDelegate.swift in Sources */,
 				6B97EADC2547A8F7000A8C79 /* SceneDelegate.swift in Sources */,
+				6B97EB192547AA69000A8C79 /* HTTPRequestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
