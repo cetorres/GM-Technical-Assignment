@@ -56,6 +56,7 @@ extension MainViewController: MainViewModelDelegate {
     }
     
     func viewDataLoaded() {
+        title = "Commits (\(viewModel.commitInfoList.count))"
         self.tableView.reloadData()
         self.tableView.refreshControl?.endRefreshing()
     }
