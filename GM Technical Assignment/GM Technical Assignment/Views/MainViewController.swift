@@ -20,7 +20,6 @@ class MainViewController: UIViewController {
         
         // Table view settings
         tableView.dataSource = self
-        tableView.delegate = self
         tableView.tableFooterView = UIView()
         
         // Table view refresh control
@@ -43,7 +42,9 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+// MARK: UITableViewDataSource
+
+extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.commitInfoList.count
     }
@@ -55,6 +56,8 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 }
+
+// MARK: MainViewModelDelegate
 
 extension MainViewController: MainViewModelDelegate {
     func loadViewDataError(error: String) {
