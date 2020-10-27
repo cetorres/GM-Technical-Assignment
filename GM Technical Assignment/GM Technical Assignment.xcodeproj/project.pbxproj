@@ -19,6 +19,7 @@
 		6B97EB212547AAC9000A8C79 /* CommitInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B97EB202547AAC9000A8C79 /* CommitInfo.swift */; };
 		6B97EB262547AAE3000A8C79 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B97EB252547AAE3000A8C79 /* Commit.swift */; };
 		6B97EB2B2547AAF5000A8C79 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B97EB2A2547AAF5000A8C79 /* Author.swift */; };
+		6B97EB332547AB69000A8C79 /* CommitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B97EB322547AB69000A8C79 /* CommitService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		6B97EB202547AAC9000A8C79 /* CommitInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitInfo.swift; sourceTree = "<group>"; };
 		6B97EB252547AAE3000A8C79 /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
 		6B97EB2A2547AAF5000A8C79 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		6B97EB322547AB69000A8C79 /* CommitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		6B97EB132547A9D0000A8C79 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				6B97EB322547AB69000A8C79 /* CommitService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B97EB332547AB69000A8C79 /* CommitService.swift in Sources */,
 				6B97EB262547AAE3000A8C79 /* Commit.swift in Sources */,
 				6B97EB212547AAC9000A8C79 /* CommitInfo.swift in Sources */,
 				6B97EADE2547A8F7000A8C79 /* MainViewController.swift in Sources */,
