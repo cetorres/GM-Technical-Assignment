@@ -99,6 +99,12 @@
 		6B97EAD82547A8F7000A8C79 /* GM Technical Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				6B97EB122547A9C9000A8C79 /* Models */,
+				6B97EB132547A9D0000A8C79 /* Services */,
+				6B97EB142547A9D6000A8C79 /* View Models */,
+				6B97EB152547A9E0000A8C79 /* Views */,
+				6B97EB162547A9E5000A8C79 /* Utils */,
+				6B97EB172547A9EC000A8C79 /* Extensions */,
 				6B97EAD92547A8F7000A8C79 /* AppDelegate.swift */,
 				6B97EADB2547A8F7000A8C79 /* SceneDelegate.swift */,
 				6B97EADD2547A8F7000A8C79 /* MainViewController.swift */,
@@ -126,6 +132,48 @@
 				6B97EAFD2547A8F9000A8C79 /* Info.plist */,
 			);
 			path = "GM Technical AssignmentUITests";
+			sourceTree = "<group>";
+		};
+		6B97EB122547A9C9000A8C79 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6B97EB132547A9D0000A8C79 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6B97EB142547A9D6000A8C79 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		6B97EB152547A9E0000A8C79 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6B97EB162547A9E5000A8C79 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6B97EB172547A9EC000A8C79 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
