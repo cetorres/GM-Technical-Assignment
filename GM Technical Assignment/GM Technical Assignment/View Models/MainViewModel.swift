@@ -54,6 +54,10 @@ class MainViewModel {
     }
     
     private func createViewData(commitInfoList: [CommitInfo]) {
+        // Clear the view data list
+        viewDataList.removeAll()
+        
+        // Prepare the date with format and if it will displayed as time or date
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -67,6 +71,7 @@ class MainViewModel {
             else {
                 dateString = date.shortDate
             }
+            // Append the view data object to the list
             viewDataList.append(MainViewData(author: item.commit.author.name, hash: item.sha, message: item.commit.message, date: dateString))
         }
     }
