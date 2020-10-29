@@ -38,7 +38,7 @@ class MainViewController: UIViewController {
     }
 
     @objc func refreshData() {
-        viewModel.reloadCommitInfo()
+        viewModel.reloadViewData()
     }
 }
 
@@ -46,13 +46,13 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.commitInfoList.count
+        return viewModel.viewDataList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommitInfoCell", for: indexPath) as! CommitInfoCell
         cell.selectionStyle = .none
-        cell.setData(commitInfo: viewModel.commitInfoList[indexPath.row])
+        cell.setData(viewData: viewModel.viewDataList[indexPath.row])
         return cell
     }
 }
@@ -67,7 +67,7 @@ extension MainViewController: MainViewModelDelegate {
     }
     
     func viewDataLoaded() {
-        title = "Commits (\(viewModel.commitInfoList.count))"
+        title = "Commits (\(viewModel.viewDataList.count))"
         self.tableView.reloadData()
         self.tableView.refreshControl?.endRefreshing()
         self.activityIndicator.stopAnimating()

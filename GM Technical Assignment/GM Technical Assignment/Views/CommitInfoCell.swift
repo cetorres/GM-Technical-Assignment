@@ -12,12 +12,14 @@ class CommitInfoCell: UITableViewCell {
     @IBOutlet weak var txtAuthorName: UILabel!
     @IBOutlet weak var txtCommitHash: UILabel!
     @IBOutlet weak var txtCommitMessage: UILabel!
+    @IBOutlet weak var txtDate: UILabel!
 
-    // Set the data of the cell from the CommitInfo object
-    func setData(commitInfo: CommitInfo) {
-        txtAuthorName.text = commitInfo.commit.author.name
-        txtCommitHash.text = commitInfo.sha
-        txtCommitMessage.text = commitInfo.commit.message
+    // Set the data of the cell from the MainViewData object
+    func setData(viewData: MainViewData) {
+        txtAuthorName.text = viewData.author
+        txtCommitHash.text = viewData.hash
+        txtCommitMessage.text = viewData.message
+        txtDate.text = viewData.date
     }
 
 }

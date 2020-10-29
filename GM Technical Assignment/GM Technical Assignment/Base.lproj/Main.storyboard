@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3HY-5I-DMO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY9-jH-5SY">
-                                                    <rect key="frame" x="20" y="11" width="374" height="20"/>
+                                                    <rect key="frame" x="20" y="11" width="299" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="lFd-aI-QGk"/>
                                                     </constraints>
@@ -51,17 +51,29 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqa-jX-EWD">
+                                                    <rect key="frame" x="307" y="10" width="87" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="87" id="Fsb-NE-HFu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Ex8-kk-3Mo" firstAttribute="trailing" secondItem="gTL-nm-08z" secondAttribute="trailingMargin" id="54R-rA-m6c"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Ex8-kk-3Mo" secondAttribute="bottom" constant="3" id="5Dl-eI-IJt"/>
-                                                <constraint firstItem="kY9-jH-5SY" firstAttribute="trailing" secondItem="gTL-nm-08z" secondAttribute="trailingMargin" id="Bcq-So-UCY"/>
+                                                <constraint firstItem="kY9-jH-5SY" firstAttribute="trailing" secondItem="cqa-jX-EWD" secondAttribute="leadingMargin" constant="4" id="Bcq-So-UCY"/>
                                                 <constraint firstItem="kY9-jH-5SY" firstAttribute="leading" secondItem="gTL-nm-08z" secondAttribute="leadingMargin" id="DS7-4p-Ixh"/>
+                                                <constraint firstItem="EFl-cT-9Iq" firstAttribute="top" secondItem="cqa-jX-EWD" secondAttribute="bottom" constant="3" id="Ymm-tZ-XyF"/>
                                                 <constraint firstItem="kY9-jH-5SY" firstAttribute="top" secondItem="gTL-nm-08z" secondAttribute="topMargin" id="eiX-4C-wUq"/>
+                                                <constraint firstItem="cqa-jX-EWD" firstAttribute="top" secondItem="gTL-nm-08z" secondAttribute="top" constant="10" id="g2R-C2-sgj"/>
                                                 <constraint firstItem="EFl-cT-9Iq" firstAttribute="leading" secondItem="gTL-nm-08z" secondAttribute="leadingMargin" id="her-Fs-aJV"/>
                                                 <constraint firstItem="Ex8-kk-3Mo" firstAttribute="top" secondItem="EFl-cT-9Iq" secondAttribute="bottom" constant="3" id="iB8-EB-cdW"/>
                                                 <constraint firstItem="Ex8-kk-3Mo" firstAttribute="leading" secondItem="gTL-nm-08z" secondAttribute="leadingMargin" id="iPD-bG-Upy"/>
                                                 <constraint firstItem="EFl-cT-9Iq" firstAttribute="trailing" secondItem="gTL-nm-08z" secondAttribute="trailingMargin" id="lon-go-c0z"/>
+                                                <constraint firstAttribute="trailing" secondItem="cqa-jX-EWD" secondAttribute="trailing" constant="20" symbolic="YES" id="vp3-PS-yrE"/>
                                                 <constraint firstItem="EFl-cT-9Iq" firstAttribute="top" secondItem="kY9-jH-5SY" secondAttribute="bottom" constant="3" id="xDx-Kn-P33"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -69,6 +81,7 @@
                                             <outlet property="txtAuthorName" destination="kY9-jH-5SY" id="hIj-ed-v3c"/>
                                             <outlet property="txtCommitHash" destination="EFl-cT-9Iq" id="7Ay-MT-Vas"/>
                                             <outlet property="txtCommitMessage" destination="Ex8-kk-3Mo" id="MWK-W9-qRi"/>
+                                            <outlet property="txtDate" destination="cqa-jX-EWD" id="zwZ-m8-gjQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
