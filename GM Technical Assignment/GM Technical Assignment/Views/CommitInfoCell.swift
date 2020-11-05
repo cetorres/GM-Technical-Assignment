@@ -8,7 +8,9 @@
 import UIKit
 
 class CommitInfoCell: UITableViewCell {
-
+    
+    static let identifier = "CommitInfoCell"
+    
     @IBOutlet weak var txtAuthorName: UILabel!
     @IBOutlet weak var txtCommitHash: UILabel!
     @IBOutlet weak var txtCommitMessage: UILabel!

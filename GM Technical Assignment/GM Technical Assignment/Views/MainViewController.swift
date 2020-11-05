@@ -50,7 +50,7 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CommitInfoCell", for: indexPath) as! CommitInfoCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CommitInfoCell.identifier, for: indexPath) as! CommitInfoCell
         cell.selectionStyle = .none
         cell.setData(viewData: viewModel.viewDataList[indexPath.row])
         return cell
