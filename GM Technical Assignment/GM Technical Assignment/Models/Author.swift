@@ -7,18 +7,12 @@
 
 import Foundation
 
-class Author: Codable {
+struct Author: Codable {
     let name: String
     let email: String
     let date: String
     
     enum CodingKeys: String, CodingKey {
         case name, email, date
-    }
-
-    init(name: String, email: String, date: String) {
-        self.name = name
-        self.email = email
-        self.date = date
     }
 }

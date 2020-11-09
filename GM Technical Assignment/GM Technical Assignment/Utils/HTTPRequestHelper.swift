@@ -10,7 +10,7 @@ import Foundation
 /**
  Create an object of the class HTTPRequestHelper with a response data type (model)
  */
-class HTTPRequestHelper<T: Codable> {
+class HTTPRequestHelper {
     /**
      * Create and send a HTTP request using URLSession and automaticaly serialize the response data to a type (model) passed as parameter.
      *
@@ -18,10 +18,12 @@ class HTTPRequestHelper<T: Codable> {
      * - Parameter parameters: The request parameters to be sent with the request.
      * - Parameter completion: The clousure that will be called with the Result object.
      */
-    func sendRequest(_ url: String, parameters: [String: String], completion: @escaping (Result<[T], Error>) -> Void) {
+    func sendRequest<T: Codable>(_ url: String, parameters: [String: String]? = nil, completion: @escaping (Result<[T], Error>) -> Void) {
         var components = URLComponents(string: url)!
-        components.queryItems = parameters.map { (key, value) in
-            URLQueryItem(name: key, value: value)
+        if let parameters = parameters {
+            components.queryItems = parameters.map { (key, value) in
+                URLQueryItem(name: key, value: value)
+            }
         }
         components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
         let request = URLRequest(url: components.url!)

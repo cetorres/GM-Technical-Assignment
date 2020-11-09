@@ -7,16 +7,11 @@
 
 import Foundation
 
-class Commit: Codable {
+struct Commit: Codable {
     let author: Author
     let message: String
 
     enum CodingKeys: String, CodingKey {
         case author, message
-    }
-
-    init(author: Author, message: String) {
-        self.author = author
-        self.message = message
     }
 }
